@@ -6,6 +6,7 @@ const express = require('express')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Defines path for express configuration
 const publicdir = path.join(__dirname, '../public')
@@ -84,6 +85,6 @@ app.get('*', (req, res) => {
         name: 'vinzmoke-zoro'
     })
 })
-app.listen(3000, () => {
-    console.log('The server is running on port 3000')
+app.listen(port, () => {
+    console.log('The server is running on port ' + port + ".")
 })
