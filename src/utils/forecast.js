@@ -7,7 +7,7 @@ const forecast = (lat, lon, callback) => {
        callback("Unable to connect to the weather service.Please check your Internet connection.", undefined)
       }
       else{
-          callback(undefined, body.daily[0].weather[0].description + " throughout the day.<br>Temperature : " + body.current.temp.toFixed(0) + "&deg;C.<br>Humidity : " + body.current.humidity + "%.<br>Pressure : " + body.current.pressure + " mb")
+          callback(undefined, body.daily[0].weather[0].description + " throughout the day.<br>Temperature : " + body.current.temp.toFixed(0) + "&deg;C.<br>Humidity : " + body.current.humidity + "%.<br>Pressure : " + body.current.pressure + " mb." + "<br>Dew Point : " + body.current.dew_point + "&deg;C.<br>UV index : " + body.current.uvi + " mWm<sup>-2</sup>.")
       }
   })
 } 
